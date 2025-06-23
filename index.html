@@ -28,6 +28,7 @@
     </script>
     <script>
         let student2 = {
+            ...student1,
             Bio:"Player"
         };
 
@@ -39,6 +40,8 @@
     <script>
         // ...js spread/copy operator
         let student3 = {
+            ...student2,
+            
             //1.P:v
             //1."P":V
             //1.'P':V
@@ -49,6 +52,7 @@
 
             //2. Method
         }
+        console.log(student3);
         //new property
         //MobNo
         //3. way of defining new property
@@ -65,6 +69,60 @@
         }
 
         console.log(student4);
+    </script>
+
+    <script>
+
+        let student5 = {
+            name:"Monish"
+        }
+        delete student5.name
+
+        // surname
+
+        // 4th way of crating property
+        //  person[X] = age ;
+        //object[expression]= new value ;
+        let s ="surname";
+        student5[s] ="Laal Pari"
+        student5.age = 40;
+        student5.category = "General";
+
+        console.log(student5);
+
+    </script>
+
+    <script>
+        let student6 = {
+            firstName:"Palak",
+            lastName:"Agrawal",
+
+            
+        }
+        console.log("Before removing >>",student6);
+
+        // delete object.property
+        delete student6["firstName"];  
+        console.log("After removing >>",student6);      
+    </script>
+
+    <script>
+        // js Nested object
+
+        let student7 = {
+           fname:"Vishal",
+           favTeachers:{
+            teacher1:"sir A",
+            teacher2:"sir B",
+            teacher3:"mam C",
+           }
+
+        }
+
+        console.log(student7);
+        console.log("Hello   "+student7["fname"]);
+        console.log("Hello   "+student7["favTeachers"]["teacher1"]);
+        console.log("Heya    "+student7["favTeachers"]["teacher2"]);
     </script>
 </body>
 </html>
